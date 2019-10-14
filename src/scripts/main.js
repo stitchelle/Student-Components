@@ -86,3 +86,21 @@ const createStudentComponent = (name, subject, info) => {
         </div>
     `
 }
+
+//
+
+for (const student of students) {
+    let studentComponent = ""
+    if (student.score >= 60) {
+        studentComponent = "passing"
+    } else {
+        studentComponent = "failing"
+    } 
+    return `
+        <div class="student">
+            <h1 class="xx-large ${studetnComponent}">${name}</h1>
+            <section class="bordered dashed section--padded">${subject}</section>
+            <aside class="pushRight">${info}</aside>
+        </div>
+    `
+}
